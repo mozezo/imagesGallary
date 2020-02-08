@@ -15,21 +15,45 @@ const Navbar = (props) => {
                             <Link>
                                360 PLANNER
                             </Link>
+                            <NavLinksDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> More </LinkDropdown>
+                            </NavLinksDropdown>
                         </NavLinksToggle>
                         <NavLinksToggle>
                             <Link>
                                HER
                             </Link>
+                            <NavLinksDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> More </LinkDropdown>
+                            </NavLinksDropdown>
                         </NavLinksToggle>
                         <NavLinksToggle>
                             <Link>
                                HIM
                             </Link>
+                            <NavLinksDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> More </LinkDropdown>
+                            </NavLinksDropdown>
                         </NavLinksToggle>
                         <NavLinksToggle>
                             <Link>
                                the WEDDING
                             </Link>
+                            <NavLinksDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> More </LinkDropdown>
+                            </NavLinksDropdown>
                         </NavLinksToggle>
                     </NavLinks>
                 </LinksLeft>
@@ -40,16 +64,32 @@ const Navbar = (props) => {
                             <Link>
                               VENDORS
                             </Link>
+                            <NavLinksDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> More </LinkDropdown>
+                            </NavLinksDropdown>
                         </NavLinksToggle>
                         <NavLinksToggle>
                             <Link>
                               Gallary
                             </Link>
+                            <NavLinksDropdown>
+                                <LinkDropdown> Wedding Ideas </LinkDropdown>
+                                <LinkDropdown> More </LinkDropdown>
+                            </NavLinksDropdown>
                         </NavLinksToggle>
                         <NavLinksToggle>
                             <Link>
                               IDEAS & MORE
                             </Link>
+                            <NavLinksDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> Check list </LinkDropdown>
+                                <LinkDropdown> More </LinkDropdown>
+                            </NavLinksDropdown>
                         </NavLinksToggle>
                     </NavLinks>
                 </LinksRight>
@@ -85,6 +125,7 @@ const LinksLeft = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 15px
 `;
 
 const LinksRight = styled.div`
@@ -96,6 +137,7 @@ const LinksRight = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 15px
 `;
 const NavLinks = styled.ul`
   padding: 0;
@@ -106,16 +148,23 @@ const NavLinks = styled.ul`
   justify-content: space-between;
   align-items: center;
   color: #000000;
+
   @media (max-width: 768px) {
       display: none;
   }
-  }
+  
 `;
 
 const NavLinksToggle =styled.li`
   position: relative;
   padding: 12px 7px;
   text-align: center;
+  &:hover {
+    >div {
+        cursor: pointer;
+        visibility: visible;
+    }
+  }
   @media (max-width: 991px){
     padding: 11px 3px;
   }
@@ -133,10 +182,37 @@ const Link = styled.a`
   text-align: left;
   text-decoration: none;
   font-size: 14px;
+  cursor: pointer;
   @media (max-width: 1200px) {
    font-size: 10px;
   }
   @media (max-width: 991px) {
     font-size: 8.8px !important;
    }
+`;
+
+const NavLinksDropdown = styled.div`
+    background-color: white;
+    visibility: hidden;
+    min-width: 100% !important;
+    top: 45px;
+    left: 0;
+    z-index: 9999;
+    position: absolute;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    &:hover {
+        cursor: pointer;
+        visibility: visible;
+    }
+`;
+
+const LinkDropdown = styled.a`
+    color: #000;
+    border-top: solid 1px #000;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    font-size: 13.6px;
+    padding: 10px 15px;
+    cursor: pointer;
 `;
