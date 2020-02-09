@@ -125,7 +125,10 @@ const LinksLeft = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 15px
+  margin-right: 15px;
+  @media (max-width: 768px) {
+    display: none;
+}
 `;
 
 const LinksRight = styled.div`
@@ -137,7 +140,10 @@ const LinksRight = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 15px
+  margin-left: 15px;
+  @media (max-width: 768px) {
+    display: none;
+}
 `;
 const NavLinks = styled.ul`
   padding: 0;
@@ -147,12 +153,7 @@ const NavLinks = styled.ul`
   list-style-type: none;
   justify-content: space-between;
   align-items: center;
-  color: #000000;
-
-  @media (max-width: 768px) {
-      display: none;
-  }
-  
+  color: #000000; 
 `;
 
 const NavLinksToggle =styled.li`
@@ -160,6 +161,7 @@ const NavLinksToggle =styled.li`
   padding: 12px 7px;
   text-align: center;
   &:hover {
+    color: #000;
     >div {
         cursor: pointer;
         visibility: visible;
@@ -183,6 +185,9 @@ const Link = styled.a`
   text-decoration: none;
   font-size: 14px;
   cursor: pointer;
+  &:hover {
+    color: #000;
+  }
   @media (max-width: 1200px) {
    font-size: 10px;
   }
@@ -215,4 +220,7 @@ const LinkDropdown = styled.a`
     font-size: 13.6px;
     padding: 10px 15px;
     cursor: pointer;
+    &:hover {
+        color: #000;
+    }
 `;

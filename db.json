@@ -1,0 +1,63 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "WEDDING IDEAS"
+        }
+    ],
+    "images": [
+        {
+            "id": 1,
+             "url": "",
+             "name": "Wedding details",
+             "categoryId" : 1
+        },{
+            "id": 2,
+            "url": "",
+            "name": "Gold/marble wedding cake",
+            "categoryId" : 1
+        },
+        {
+            "id": 3,
+            "url": "",
+            "name": "Gold frame Invitation set ",
+            "categoryId" : 1
+        },
+        {
+            "id": 4,
+            "url": "",
+            "name": "Beating hearts",
+            "categoryId" : 1
+        },
+        {
+            "id": 5,
+            "url": "",
+            "name": "Peach wonderland ",
+            "categoryId" : 1
+        },
+        {
+            "id": 6,
+            "url": "",
+            "name": "White and silver Cake",
+            "categoryId" : 1
+        },
+        {
+            "id": 7,
+            "url": "",
+            "name": "White and silver Cake",
+            "categoryId" : 1
+        },
+        {
+            "id": 8,
+            "url": "",
+            "name": "Wooden guestbook",
+            "categoryId" : 1
+        },
+        {
+            "id": 9,
+            "url": "",
+            "name": "Love is in the air",
+            "categoryId" : 1
+        }
+    ]
+}
