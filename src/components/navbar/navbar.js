@@ -220,6 +220,7 @@ const LinkDropdown = styled.a`
     font-size: 13.6px;
     padding: 10px 15px;
     cursor: pointer;
+    font-weight: 900;
     &:hover {
         color: #000;
     }

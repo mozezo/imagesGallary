@@ -9,9 +9,9 @@ import 'antd/dist/antd.css'
 const ImageGallary = () => {
 
     const [searchTerm, setSearchTerm] = useState("");
-    const imgs = useSelector(state => state.imgs);
-    const isLoading = useSelector(state => state.isLoading);
-    const error = useSelector(state => state.error);
+    const categoryImages = useSelector(state => state.categoryImages);
+    //const isLoading = useSelector(state => state.isLoading);
+    //const error = useSelector(state => state.error);
     const [searchResults, setSearchResults] = useState([]);
     const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ const ImageGallary = () => {
 
     const handleSearchResults = () => {
         console.log('searchResults', searchResults)
-      const results =  imgs.images.filter(img => 
+      const results =  categoryImages.images.filter(img => 
            img.name.toLowerCase().includes(searchTerm) );
 
         console.log('results', results)
@@ -46,8 +46,7 @@ const ImageGallary = () => {
         }
         return originalElement;
       }
-    const { images } = imgs
-
+    const { images, isLoading, error } = categoryImages
     const imagesOrSearchResults = searchResults.length > 0 ? searchResults : images
     //const imagesgrid = JSON.parse(JSON.stringify(images));
     return (
@@ -72,7 +71,7 @@ const ImageGallary = () => {
                     {!isLoading && error === null ?  imagesOrSearchResults.map((image) => 
                         <ImageContainer>
                             <Image
-                                src="https://weds360-production.s3.eu-west-1.amazonaws.com/store/photo/396/src/large-8361b1b279a185bc85ae1ed1c6bc1022.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3XIBZMGBAF2YAFWK%2F20200208%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200208T224731Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=6b7df922190f145756c672502966057fee0fe6731035765771a2d7f0564c04ff"
+                                src="https://weds360-production.s3.eu-west-1.amazonaws.com/store/photo/395/src/medium-24871eacb03d4d88afb0bf41ccb975dc.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3XIBZMGBAF2YAFWK%2F20200210%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200210T193701Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=676e49f2338e31c95b6e1de971b8f8499f0fe660b057a43c23c742cc3d2b9d2a"
                                 alt={image.name}
                             />
                             <ImageName>{image.name}</ImageName>

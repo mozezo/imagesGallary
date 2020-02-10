@@ -1,13 +1,11 @@
-import loadingReducer from './loadingReducer';
-import errorReducer from './errorReducer';
-import imageReducer from './imageReducer';
+import imageReducer from './image';
 
+import CategoryReducer from './category'
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
-    isLoading: loadingReducer,
-    imgs: imageReducer,
-    error: errorReducer
+    categoryImages: imageReducer,
+    categories: CategoryReducer,
 });
 
 export default rootReducer;

@@ -1,6 +1,6 @@
 import { put, call, takeEvery, select } from 'redux-saga/effects';
 
-import { getImages, getError } from '../Actions';
+import { getImages, getErrorImages } from '../Actions';
 import { IMAGES } from '../Constants';
 import { fetchImages } from '../apis';
 
@@ -12,7 +12,7 @@ export function* handleImagesLoad() {
         const images = yield call(fetchImages, page);
         yield put(getImages(images));
     } catch (error) {
-        yield put(getError(error.toString()));
+        yield put(getErrorImages(error.toString()));
     }
 }
 
